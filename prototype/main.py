@@ -15,10 +15,10 @@ while True:
     frame_denoise = cv.medianBlur(frame_resized, ksize=5)
     frame_edges = cv.Canny(frame_resized, 100, 200)
 
-    # cv.imwrite('processed images/resized_frame.png', frame_resized)
-    # cv.imwrite('processed images/black_and_white_frame.png', frame_bw)
-    # cv.imwrite('processed images/edges_detection_frame.png', frame_edges)
-    # cv.imwrite('processed images/denoise_frame.png', frame_denoise)
+    cv.imwrite('processed images/resized_frame.png', frame_resized)
+    cv.imwrite('processed images/black_and_white_frame.png', frame_bw)
+    cv.imwrite('processed images/edges_detection_frame.png', frame_edges)
+    cv.imwrite('processed images/denoise_frame.png', frame_denoise)
 
     cv.imshow('Normal', frame)
     cv.imshow('Resized', frame_resized)
